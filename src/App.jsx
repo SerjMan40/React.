@@ -1,14 +1,19 @@
-import Button from './/components/Button.jsx'
+import {useState} from 'react'
+import ButtonStateless from './/components/Button.jsx'
+import RandomStateful from './components/Random.jsx'
+import randomColor from './utils/randomColor.js'
 
-const App  = () => {
-  const handleClick = () => {
-    console.log('Button clicked')
+const App = () => {
+  const [buttonColor, setButtonColor] = useState('blue')
+
+  const changeButtonColor = () => {
+    setButtonColor(randomColor)
   }
+
   return (
-    <div>
-      <Button text='Submit button' onClick={handleClick} />
-      <Button text='Reset botton' />
-      <Button text='Button text' onClick={handleClick} />
+    <div className='button-container'>
+      <ButtonStateless color={buttonColor} onClick={changeButtonColor} />
+      <RandomStateful min={0} max={100} />
     </div>
   )
 }

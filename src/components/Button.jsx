@@ -1,11 +1,9 @@
-const Button = ({text, onClick}) => {
+const ButtonStateless = ({color, onClick}) => {
   return (
-    <div>
-      <button type='button' onClick={onClick}>
-        {text}
-      </button>
-    </div>
+    <button style={{backgroundColor: color}} onClick={onClick}>
+      Chenge color
+    </button>
   )
 }
 
-export default Button
+export default ButtonStateless
