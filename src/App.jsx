@@ -1,19 +1,24 @@
-import {useState} from 'react'
-import ButtonStateless from './/components/Button.jsx'
-import RandomStateful from './components/Random.jsx'
-import randomColor from './utils/randomColor.js'
+import UncontrolledForm from './components/UncontrolledForm'
+import ControlledForm from './components/ControlledForm'
+import UsersData from './components/UsersData'
 
 const App = () => {
-  const [buttonColor, setButtonColor] = useState('blue')
-
-  const changeButtonColor = () => {
-    setButtonColor(randomColor)
-  }
-
   return (
-    <div className='button-container'>
-      <ButtonStateless color={buttonColor} onClick={changeButtonColor} />
-      <RandomStateful min={0} max={100} />
+    <div className='container'>
+      <div>
+        <h1>Controlled Form</h1>
+        <ControlledForm />
+      </div>
+
+      <div className='mt-2'>
+        <h1>Uncontroled Form</h1>
+        <UncontrolledForm />
+      </div>
+
+      <div className='mt-2'>
+        <h1>User List</h1>
+        <UsersData />
+      </div>
     </div>
   )
 }
