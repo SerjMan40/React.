@@ -1,4 +1,4 @@
-const API_URL = 'https://jsonplaceholder.typicode.com/users1'
+const API_URL = 'https://jsonplaceholder.typicode.com/users'
 
 const fetchData = async () => {
   try {
