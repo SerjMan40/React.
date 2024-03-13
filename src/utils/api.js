@@ -1,16 +1,14 @@
+import axios from 'axios'
+
 const API_URL = 'https://jsonplaceholder.typicode.com/users'
 
-const fetchData = async () => {
+const axiosData = async () => {
   try {
-    const response = await fetch(API_URL)
+    const response = await axios.get(API_URL)
 
-    if (!response.ok) {
-      throw new Error('Failed to fetch data')
-    }
-    const data = await response.json()
-    return data
+    return response.data
   } catch (err) {
     throw new Error('Error fetching data')
   }
 }
-export default fetchData
+export default axiosData
