@@ -10,3 +10,38 @@ html,
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.activeLink,
+nav .active {
+  background-color: red;
+  color: white;
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.Link {
+  display: block;
+  padding: 20px;
+  background-color: rgb(206, 183, 228);
+}
+
+footer {
+  margin-top:20px;
+  display: flex;
+  justify-content: left;
+  gap:20px;
+  
+}
+
+
+a,
+button,
+h1 {
+  margin-left: 20px;
+  margin-top: 20px;
+}
