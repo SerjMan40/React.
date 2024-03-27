@@ -1,18 +1,12 @@
-import {useNavigate} from 'react-router-dom'
+import {useContext} from 'react'
+import {PropContext} from '../App'
 
 const Home = () => {
-  const navigate = useNavigate()
-
-  const handleClick = () => {
-    navigate('/about')
-  }
-
+  const propValue = useContext(PropContext)
   return (
-    <div>
+    <div className='mt-4'>
       <h1>Це домашня сторінка</h1>
-      <button className='btn btn-primary' onClick={handleClick}>
-        Go to About
-      </button>
+      <p>{propValue}</p>
     </div>
   )
 }
